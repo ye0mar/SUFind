@@ -1,0 +1,43 @@
+/* =========================================================
+   FORMS
+   ========================================================= */
+.form-card .card-body { padding: 24px; }
+.form-grid { display: grid; gap: 16px; }
+.form-grid.two-col { grid-template-columns: 1fr 1fr; }
+.form-grid .full { grid-column: 1 / -1; }
+
+.form-group { display: flex; flex-direction: column; }
+.form-group label {
+    font-size: 12.5px; font-weight: 500; color: var(--text);
+    margin-bottom: 6px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    font-family: var(--font); font-size: 13.5px;
+    padding: 9px 12px; border: 1px solid var(--border);
+    border-radius: var(--radius-sm); background: #fff; color: var(--text);
+    transition: border-color .15s, box-shadow .15s;
+    width: 100%;
+}
+.form-group textarea { resize: vertical; min-height: 80px; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none; border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(54,120,246,.12);
+}
+.form-group input:disabled { background: var(--surface-2); color: var(--text-2); cursor: not-allowed; }
+
+.form-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 8px; grid-column: 1 / -1; }
+
+.password-wrap { position: relative; }
+.password-wrap input { padding-right: 60px; }
+.toggle-pass {
+    position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+    background: none; border: none; color: var(--accent); cursor: pointer;
+    font-size: 12px; font-family: var(--font); padding: 4px 8px;
+}
